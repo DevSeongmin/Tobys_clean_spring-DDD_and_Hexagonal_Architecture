@@ -3,8 +3,6 @@ package tobyspring.splearn.domain;
 import static org.assertj.core.api.Assertions.*;
 import static tobyspring.splearn.domain.MemberFixture.*;
 
-import java.util.Locale;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
