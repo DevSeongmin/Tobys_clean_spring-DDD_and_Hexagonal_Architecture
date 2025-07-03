@@ -6,13 +6,7 @@ import static org.springframework.util.Assert.*;
 import org.hibernate.annotations.NaturalId;
 import org.hibernate.annotations.NaturalIdCache;
 
-import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,15 +14,10 @@ import lombok.ToString;
 
 @Entity
 @Getter
-@ToString
+@ToString(callSuper = true)
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @NaturalIdCache
-public class Member {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-
-	@Embedded
+public class Member extends AbstractEntity {
 	@NaturalId
 	private Email email;
 
@@ -36,7 +25,6 @@ public class Member {
 
 	private String passwordHash;
 
-	@Enumerated(EnumType.STRING)
 	private MemberStatus status;
 
 	public static Member register(MemberRegisterRequest registerRequest, PasswordEncoder passwordEncoder) {
