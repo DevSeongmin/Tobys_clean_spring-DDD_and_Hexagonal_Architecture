@@ -1,14 +1,14 @@
-package tobyspring.splearn.application;
+package tobyspring.splearn.application.member;
 
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
-import tobyspring.splearn.application.provided.MemberFinder;
-import tobyspring.splearn.application.required.MemberRepository;
-import tobyspring.splearn.domain.Member;
-import tobyspring.splearn.domain.PasswordEncoder;
+import tobyspring.splearn.application.member.provided.MemberFinder;
+import tobyspring.splearn.application.member.required.MemberRepository;
+import tobyspring.splearn.domain.member.Member;
+import tobyspring.splearn.domain.member.PasswordEncoder;
 
 @Service
 @Transactional

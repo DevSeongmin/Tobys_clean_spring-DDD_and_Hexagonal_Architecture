@@ -1,4 +1,4 @@
-package tobyspring.splearn.application.provided;
+package tobyspring.splearn.application.member.provided;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -9,8 +9,8 @@ import org.springframework.context.annotation.Import;
 import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
 import tobyspring.splearn.SplearnTestConfiguration;
-import tobyspring.splearn.domain.Member;
-import tobyspring.splearn.domain.MemberFixture;
+import tobyspring.splearn.domain.member.Member;
+import tobyspring.splearn.domain.member.MemberFixture;
 
 @SpringBootTest
 @Transactional
